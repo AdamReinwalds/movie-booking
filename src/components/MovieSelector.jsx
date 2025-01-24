@@ -2,7 +2,7 @@ import React from "react";
 
 const MovieSelector = ({ changeHandler, movies }) => {
   const movieOptions = movies.map((movie) => (
-    <option key={movie.id} value={movie.price.value}>
+    <option key={movie.id} id={movie.id} value={movie.price.value}>
       {`${movie.title} (${movie.price.value}${movie.price.currencySuffix})`}
     </option>
   ));

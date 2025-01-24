@@ -114,3 +114,50 @@ p.text {
 p.text span {
   color: #6feaf6;
 }
+
+/* Form Handling */
+#form {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: red;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  border: #242333 1px solid;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(50px);
+}
+.form__button-container {
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  margin: 10px 0;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: inherit;
+  border: #242333 1px solid;
+}
+.button {
+  background-color: hsl(185, 88%, 50%);
+  color: black;
+  border-radius: 5px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: inherit;
+  padding: 10px;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: hsl(185, 88%, 40%);
+}

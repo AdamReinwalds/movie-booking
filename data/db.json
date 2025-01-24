@@ -1,0 +1,262 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "The Shawshank Redemption",
+      "price": {
+        "value": 100,
+        "currencySuffix": "kr"
+      }
+    },
+    {
+      "id": "2",
+      "title": "The Godfather",
+      "price": {
+        "value": 200,
+        "currencySuffix": "kr"
+      }
+    },
+    {
+      "id": "3",
+      "title": "The Dark Knight",
+      "price": {
+        "value": 300,
+        "currencySuffix": "kr"
+      }
+    }
+  ],
+  "bookedSeatsByMovie": [
+    {
+      "id": "1",
+      "movieId": "1",
+      "occupiedSeatIndexes": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        40,
+        41,
+        46,
+        47
+      ]
+    },
+    {
+      "id": "2",
+      "movieId": "2",
+      "occupiedSeatIndexes": [
+        18,
+        19,
+        0,
+        1,
+        2,
+        4,
+        5,
+        3,
+        46,
+        47,
+        44,
+        36,
+        28,
+        20,
+        7,
+        14,
+        23,
+        30
+      ]
+    },
+    {
+      "id": "3",
+      "movieId": "3",
+      "occupiedSeatIndexes": [
+        0,
+        1,
+        6,
+        7,
+        45,
+        36,
+        46,
+        47,
+        40,
+        41,
+        39
+      ]
+    }
+  ],
+  "testBookings": [
+    {
+      "id": "9f10",
+      "name": "hej",
+      "email": "hej@",
+      "movieId": "1",
+      "bookedSeats": [
+        0
+      ]
+    },
+    {
+      "id": "2a96",
+      "name": "adam",
+      "email": "adam.reinwalds@yh.nackademin.se",
+      "movieId": "1",
+      "bookedSeats": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "1e8e",
+      "name": "may",
+      "email": "may@hotmail.com",
+      "movieId": "2",
+      "bookedSeats": [
+        18,
+        19
+      ]
+    },
+    {
+      "id": "409d",
+      "name": "ada",
+      "email": "ghjbkasd@sdf.com",
+      "movieId": "3",
+      "bookedSeats": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "7af1",
+      "name": "ctvj",
+      "email": "dfghj@",
+      "movieId": "2",
+      "bookedSeats": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "c41d",
+      "name": "fdggh",
+      "email": "dfxcghj@",
+      "movieId": "1",
+      "bookedSeats": [
+        4,
+        5
+      ]
+    },
+    {
+      "id": "0e1d",
+      "name": "gbhjk",
+      "email": "@",
+      "movieId": "2",
+      "bookedSeats": [
+        2,
+        4,
+        5,
+        3
+      ]
+    },
+    {
+      "id": "9c0e",
+      "name": "rytguk",
+      "email": "@",
+      "movieId": "1",
+      "bookedSeats": [
+        40,
+        41
+      ]
+    },
+    {
+      "id": "6819",
+      "name": "cfvhjb",
+      "email": "@",
+      "movieId": "3",
+      "bookedSeats": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "3fc3",
+      "name": "hnj",
+      "email": "@",
+      "movieId": "2",
+      "bookedSeats": [
+        46,
+        47
+      ]
+    },
+    {
+      "id": "0a49",
+      "name": "c gvghj",
+      "email": "@",
+      "movieId": "3",
+      "bookedSeats": [
+        45,
+        36
+      ]
+    },
+    {
+      "id": "5398",
+      "name": "fgh",
+      "email": "@",
+      "movieId": "3",
+      "bookedSeats": [
+        46,
+        47
+      ]
+    },
+    {
+      "id": "8990",
+      "name": "fcgvhbj",
+      "email": "@",
+      "movieId": "1",
+      "bookedSeats": [
+        46,
+        47
+      ]
+    },
+    {
+      "id": "9fb5",
+      "name": "ghbjk",
+      "email": "@",
+      "movieId": "3",
+      "bookedSeats": [
+        40,
+        41
+      ]
+    },
+    {
+      "id": "8bde",
+      "name": "hjkl",
+      "email": "@",
+      "movieId": "3",
+      "bookedSeats": [
+        39
+      ]
+    },
+    {
+      "id": "c7ec",
+      "name": "fghjbk",
+      "email": "@",
+      "movieId": "2",
+      "bookedSeats": [
+        44,
+        36,
+        28,
+        20
+      ]
+    },
+    {
+      "id": "9aa1",
+      "name": "mayday",
+      "email": "@",
+      "movieId": "2",
+      "bookedSeats": [
+        7,
+        14,
+        23,
+        30
+      ]
+    }
+  ]
+}
