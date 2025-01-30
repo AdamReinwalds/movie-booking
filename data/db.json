@@ -2,11 +2,25 @@
   "movies": [
     {
       "id": "1",
-      "title": "The Shawshank Redemption",
+      "title": "The Dark Knight",
       "price": {
-        "value": 100,
+        "value": 150,
         "currencySuffix": "kr"
-      }
+      },
+      "occupiedSeatIndexes": [
+        7,
+        8,
+        9,
+        47,
+        1,
+        0,
+        40,
+        41,
+        45,
+        44,
+        46
+      ],
+      "available": true
     },
     {
       "id": "2",
@@ -14,210 +28,125 @@
       "price": {
         "value": 200,
         "currencySuffix": "kr"
-      }
-    },
-    {
-      "id": "3",
-      "title": "The Dark Knight",
-      "price": {
-        "value": 300,
-        "currencySuffix": "kr"
-      }
-    }
-  ],
-  "bookedSeatsByMovie": [
-    {
-      "id": "1",
-      "movieId": "1",
+      },
       "occupiedSeatIndexes": [
-        0,
-        2,
-        3,
         4,
         5,
-        40,
-        41,
-        46,
-        47
-      ]
-    },
-    {
-      "id": "2",
-      "movieId": "2",
-      "occupiedSeatIndexes": [
-        18,
-        19,
-        0,
-        1,
-        2,
-        4,
-        5,
-        3,
-        46,
-        47,
-        44,
-        36,
-        28,
-        20,
-        7,
-        14,
-        23,
-        30
-      ]
-    },
-    {
-      "id": "3",
-      "movieId": "3",
-      "occupiedSeatIndexes": [
-        0,
-        1,
         6,
-        7,
-        45,
-        36,
-        46,
-        47,
-        40,
-        41,
-        39
+        40
       ]
+    },
+    {
+      "id": "3",
+      "title": "Vivs Movie",
+      "price": {
+        "value": 2000,
+        "currencySuffix": "kr"
+      },
+      "occupiedSeatIndexes": [
+        2,
+        3,
+        5,
+        4
+      ],
+      "available": false
+    },
+    {
+      "id": "00bd",
+      "title": "The Lion King ",
+      "price": {
+        "value": 70,
+        "currencySuffix": "kr"
+      },
+      "occupiedSeatIndexes": [],
+      "available": false
+    },
+    {
+      "id": "eca4",
+      "title": "Fast and furious 6",
+      "price": {
+        "value": 100,
+        "currencySuffix": "kr"
+      },
+      "occupiedSeatIndexes": [
+        2
+      ],
+      "available": true
+    },
+    {
+      "id": "3dce",
+      "title": "Vaiana 2",
+      "price": {
+        "value": 80,
+        "currencySuffix": "kr"
+      },
+      "occupiedSeatIndexes": [],
+      "available": true
+    },
+    {
+      "id": "526d",
+      "title": "Hot Fuzz",
+      "price": {
+        "value": 700,
+        "currencySuffix": "kr"
+      },
+      "occupiedSeatIndexes": [],
+      "available": false
+    },
+    {
+      "id": "cdf5",
+      "title": "h",
+      "price": {
+        "value": 1,
+        "currencySuffix": "kr"
+      },
+      "occupiedSeatIndexes": [],
+      "available": false
     }
   ],
-  "testBookings": [
+  "bookings": [
     {
-      "id": "9f10",
-      "name": "hej",
-      "email": "hej@",
-      "movieId": "1",
-      "bookedSeats": [
-        0
-      ]
-    },
-    {
-      "id": "2a96",
-      "name": "adam",
-      "email": "adam.reinwalds@yh.nackademin.se",
-      "movieId": "1",
-      "bookedSeats": [
-        2,
-        3
-      ]
-    },
-    {
-      "id": "1e8e",
-      "name": "may",
-      "email": "may@hotmail.com",
-      "movieId": "2",
-      "bookedSeats": [
-        18,
-        19
-      ]
-    },
-    {
-      "id": "409d",
-      "name": "ada",
-      "email": "ghjbkasd@sdf.com",
-      "movieId": "3",
-      "bookedSeats": [
-        0,
-        1
-      ]
-    },
-    {
-      "id": "7af1",
-      "name": "ctvj",
-      "email": "dfghj@",
-      "movieId": "2",
-      "bookedSeats": [
-        0,
-        1
-      ]
-    },
-    {
-      "id": "c41d",
-      "name": "fdggh",
-      "email": "dfxcghj@",
-      "movieId": "1",
-      "bookedSeats": [
-        4,
-        5
-      ]
-    },
-    {
-      "id": "0e1d",
-      "name": "gbhjk",
+      "id": "0d77",
+      "name": "as",
       "email": "@",
       "movieId": "2",
-      "bookedSeats": [
-        2,
-        4,
-        5,
-        3
-      ]
-    },
-    {
-      "id": "9c0e",
-      "name": "rytguk",
-      "email": "@",
-      "movieId": "1",
-      "bookedSeats": [
-        40,
-        41
-      ]
-    },
-    {
-      "id": "6819",
-      "name": "cfvhjb",
-      "email": "@",
-      "movieId": "3",
       "bookedSeats": [
         6,
         7
       ]
     },
     {
-      "id": "3fc3",
-      "name": "hnj",
-      "email": "@",
-      "movieId": "2",
-      "bookedSeats": [
-        46,
-        47
-      ]
-    },
-    {
-      "id": "0a49",
-      "name": "c gvghj",
-      "email": "@",
-      "movieId": "3",
-      "bookedSeats": [
-        45,
-        36
-      ]
-    },
-    {
-      "id": "5398",
-      "name": "fgh",
-      "email": "@",
-      "movieId": "3",
-      "bookedSeats": [
-        46,
-        47
-      ]
-    },
-    {
-      "id": "8990",
-      "name": "fcgvhbj",
+      "id": "7a9d",
+      "name": "a",
       "email": "@",
       "movieId": "1",
       "bookedSeats": [
-        46,
+        7,
+        6
+      ]
+    },
+    {
+      "id": "f50c",
+      "name": "adam",
+      "email": "@",
+      "movieId": "3",
+      "bookedSeats": [
         47
       ]
     },
     {
-      "id": "9fb5",
-      "name": "ghbjk",
+      "id": "7b9d",
+      "name": "bhnkil",
+      "email": "@",
+      "movieId": "1",
+      "bookedSeats": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": "b1fc",
+      "name": "ad",
       "email": "@",
       "movieId": "3",
       "bookedSeats": [
@@ -226,36 +155,168 @@
       ]
     },
     {
-      "id": "8bde",
-      "name": "hjkl",
+      "id": "7da7",
+      "name": "ad",
       "email": "@",
       "movieId": "3",
+      "bookedSeats": [
+        40,
+        41
+      ]
+    },
+    {
+      "id": "117e",
+      "name": "vhjbk",
+      "email": "@",
+      "movieId": "3",
+      "bookedSeats": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "9d52",
+      "name": "a",
+      "email": "@",
+      "movieId": "1",
+      "bookedSeats": [
+        46,
+        47
+      ]
+    },
+    {
+      "id": "2351",
+      "name": "a",
+      "email": "@",
+      "movieId": "3",
+      "bookedSeats": [
+        40,
+        41
+      ]
+    },
+    {
+      "id": "bc7c",
+      "name": "hej",
+      "email": "@",
+      "movieId": "1",
+      "bookedSeats": [
+        41,
+        40
+      ]
+    },
+    {
+      "id": "ca55",
+      "name": "f",
+      "email": "@",
+      "movieId": "2",
+      "bookedSeats": [
+        40
+      ]
+    },
+    {
+      "id": "0b5d",
+      "name": "A",
+      "email": "@",
+      "movieId": "1",
+      "bookedSeats": [
+        0,
+        8
+      ]
+    },
+    {
+      "id": "c054",
+      "name": "a",
+      "email": "@",
+      "movieId": "1",
       "bookedSeats": [
         39
       ]
     },
     {
-      "id": "c7ec",
-      "name": "fghjbk",
+      "id": "e4e8",
+      "name": "a",
       "email": "@",
-      "movieId": "2",
+      "movieId": "1",
       "bookedSeats": [
-        44,
-        36,
-        28,
-        20
+        45
       ]
     },
     {
-      "id": "9aa1",
-      "name": "mayday",
+      "id": "f122",
+      "name": "adam",
       "email": "@",
-      "movieId": "2",
+      "movieId": "1",
       "bookedSeats": [
-        7,
-        14,
-        23,
+        42
+      ]
+    },
+    {
+      "id": "dfb3",
+      "name": "adam",
+      "email": "@",
+      "movieId": null,
+      "bookedSeats": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "ea6f",
+      "name": "testest",
+      "email": "test@",
+      "movieId": "1",
+      "bookedSeats": [
+        31,
         30
+      ]
+    },
+    {
+      "id": "f6d8",
+      "name": "Oliver",
+      "email": "oliver@gmail.com",
+      "movieId": "3",
+      "bookedSeats": [
+        45,
+        44
+      ]
+    },
+    {
+      "id": "1ab4",
+      "name": "b",
+      "email": "@",
+      "movieId": "8d4f",
+      "bookedSeats": [
+        2,
+        3,
+        5,
+        4
+      ]
+    },
+    {
+      "id": "c16e",
+      "name": "rdgtfh",
+      "email": "@",
+      "movieId": "1",
+      "bookedSeats": [
+        23
+      ]
+    },
+    {
+      "id": "d4c6",
+      "name": "adam",
+      "email": "@",
+      "movieId": "1",
+      "bookedSeats": [
+        46
+      ]
+    },
+    {
+      "id": "120a",
+      "name": "asd",
+      "email": "@",
+      "movieId": "eca4",
+      "bookedSeats": [
+        2
       ]
     }
   ]

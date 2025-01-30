@@ -1,10 +1,16 @@
 import React from "react";
 
-const Button = ({ text, onClick }) => {
+const Button = ({ text, onClick, isAbsolute }) => {
+  const absoluteButton = { position: "absolute", top: "20px", left: "20px" };
   return (
-    <a href="/#" className="button" onClick={onClick}>
+    <button
+      className="button"
+      type="button"
+      onClick={onClick}
+      style={isAbsolute ? absoluteButton : undefined}
+    >
       {text}
-    </a>
+    </button>
   );
 };
 

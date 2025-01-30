@@ -12,8 +12,23 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   margin: 0;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  filter: blur(5px);
+  z-index: 10;
+  pointer-events: none;
 }
 
 .movie-container {
@@ -119,25 +134,40 @@ p.text span {
 #form {
   display: flex;
   position: fixed;
+  height: 350px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
-  background-color: red;
+  z-index: 20;
+  background-color: #3c404d;
   padding: 20px;
   border-radius: 8px;
   width: 300px;
   border: #242333 1px solid;
   flex-direction: column;
   justify-content: center;
-  backdrop-filter: blur(50px);
+  /* backdrop-filter: blur(50px); */
+}
+.form__text-container h2 {
+  color: #6feaf6;
+}
+.form__text-container h2,
+.form__text-container p {
+  margin-block-start: 0;
+  margin-block-end: 5px;
+}
+.form__text-container__movie-name {
+  font-size: 20px;
+}
+.form__text-container__total-price {
+  margin-block-end: 12px;
 }
 .form__button-container {
   display: flex;
   justify-content: space-between;
 }
 input {
-  margin: 10px 0;
+  margin: 0;
   padding: 10px;
   border: 0;
   border-radius: 5px;
@@ -146,18 +176,156 @@ input {
   border: #242333 1px solid;
 }
 .button {
-  background-color: hsl(185, 88%, 50%);
+  background-color: #0fddf0;
   color: black;
   border-radius: 5px;
   width: 100px;
-  display: flex;
   justify-content: center;
   cursor: pointer;
   font-size: 14px;
   font-family: inherit;
   padding: 10px;
   text-decoration: none;
+  width: 100px;
+  height: 40px;
+  margin: 0 20px;
+  border: none;
+  transition: background-color 0.3s ease;
 }
 .button:hover {
   background-color: hsl(185, 88%, 40%);
+}
+
+.navigation-button {
+  position: absolute;
+  top: 20px;
+}
+
+/* Admin Page Container */
+.admin-page {
+  padding: 0 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #6feaf6;
+  margin-bottom: 16px;
+}
+
+/* Movie List Table */
+.movie-list table {
+  width: 100%;
+  border-collapse: collapse;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.movie-list th,
+.movie-list td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  width: 100%;
+}
+.movie-list th:first-child,
+.movie-list td:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.movie-list th {
+  background-color: #3c404d;
+  color: #fff;
+  font-size: larger;
+  width: 100%;
+}
+
+.movie-list td:last-child,
+.movie-list th:last-child {
+  text-align: right;
+}
+
+.movie-list td {
+  color: #dddddd;
+}
+
+.movie-list tr {
+  display: flex;
+}
+
+/* Input containers */
+
+.adminpage__add-movie-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: black 1px solid;
+  padding: 10px;
+}
+.adminpage__add-movie-container h2 {
+  margin-block-start: 0;
+  margin-block-end: 10px;
+}
+.adminpage__add-movie-container input {
+  margin: 0 10px;
+}
+
+.adminpage__add-movie-container__input-field {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.input-field__title-input {
+  width: 300px;
+}
+.input-field__price-input {
+  width: 100px;
+}
+
+.admin-page__button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.error-message {
+  color: red;
+  font-size: 15px;
+  margin: 5px;
+  visibility: hidden;
+  min-height: 22.67px;
+}
+.show {
+  visibility: visible;
+}
+
+/* Feedback window */
+.feedback-window {
+  position: fixed;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background-color: #3c404d;
+  padding: 10px;
+  border-radius: 8px;
+  width: 200px;
+  border: #242333 1px solid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+.feedback {
+  margin-bottom: 10px;
 }

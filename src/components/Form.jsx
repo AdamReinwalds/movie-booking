@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import Button from "./Button";
 
-const Form = ({ selectedMovieName, totalPrice, toggleForm, handleSubmit }) => {
+const Form = ({
+  selectedMovieName,
+  totalPrice,
+  toggleForm,
+  handleSubmit,
+  numberOfSeats,
+}) => {
   const [inputData, setInputData] = useState({
     name: "",
     email: "",
@@ -27,14 +33,14 @@ const Form = ({ selectedMovieName, totalPrice, toggleForm, handleSubmit }) => {
     const newErrors = {};
 
     if (!inputData.name.trim()) {
-      newErrors.name = "Name is required.";
+      newErrors.name = "Name is required";
       isValid = false;
     }
     if (!inputData.email.trim()) {
-      newErrors.email = "Email is required.";
+      newErrors.email = "Email is required";
       isValid = false;
     } else if (!inputData.email.includes("@")) {
-      newErrors.email = "Invalid email format.";
+      newErrors.email = "Invalid email format";
       isValid = false;
     }
     setErrors(newErrors);
@@ -48,10 +54,17 @@ const Form = ({ selectedMovieName, totalPrice, toggleForm, handleSubmit }) => {
   }
 
   return (
-    <form action="" id="form">
+    <form
+      action=""
+      id="form"
+      onSubmit={(e) => {
+        e.preventDefault();
+      }}
+    >
       <div className="form__text-container">
-        <h3>Booking Page</h3>
+        <h2>Booking Form</h2>
         <p id="form__text-container__movie-name">{selectedMovieName}</p>
+        <p>Number of Seats: {numberOfSeats} </p>
         <p id="form__text-container__total-price">
           Total Price: {totalPrice}kr
         </p>
@@ -65,7 +78,9 @@ const Form = ({ selectedMovieName, totalPrice, toggleForm, handleSubmit }) => {
           handleInput("name", e.target.value);
         }}
       />
-      {errors.name && <p>{errors.name}</p>}
+      <p className={`error-message ${errors.name ? "show" : ""}`}>
+        {errors.name}
+      </p>
       <input
         type="email"
         id="email"
@@ -75,7 +90,9 @@ const Form = ({ selectedMovieName, totalPrice, toggleForm, handleSubmit }) => {
           handleInput("email", e.target.value);
         }}
       />
-      {errors.email && <p>{errors.email}</p>}
+      <p className={`error-message ${errors.email ? "show" : ""}`}>
+        {errors.email}
+      </p>
       <div className="form__button-container">
         <Button text="Cancel" onClick={toggleForm} />
         <Button
