@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import React from "react";
 import MovieSelector from "./MovieSelector";
 import ShowCase from "./ShowCase";
 import SeatRow from "./SeatRow";
