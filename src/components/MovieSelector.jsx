@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const MovieSelector = ({ changeHandler, movies }) => {
   const movieOptions = movies.map((movie) => (
@@ -15,6 +16,20 @@ const MovieSelector = ({ changeHandler, movies }) => {
       </select>
     </div>
   );
+};
+
+MovieSelector.propTypes = {
+  changeHandler: PropTypes.func.isRequired,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.shape({
+        value: PropTypes.number.isRequired,
+        currencySuffix: PropTypes.string.isRequired,
+      }).isRequired,
+    })
+  ).isRequired,
 };
 
 export default MovieSelector;

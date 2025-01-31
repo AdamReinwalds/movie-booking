@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "./Button";
+import PropTypes from "prop-types";
 
 const Form = ({
   selectedMovieName,
@@ -104,6 +105,13 @@ const Form = ({
       </div>
     </form>
   );
+};
+Form.propTypes = {
+  selectedMovieName: PropTypes.string.isRequired,
+  totalPrice: PropTypes.number.isRequired,
+  toggleForm: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  numberOfSeats: PropTypes.number.isRequired,
 };
 
 export default Form;

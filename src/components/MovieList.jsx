@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import PropTypes from "prop-types";
 
 const MovieList = ({ movies, onUpdate, onDelete, onAdd }) => {
   return (
@@ -27,6 +28,18 @@ const MovieList = ({ movies, onUpdate, onDelete, onAdd }) => {
       </table>
     </div>
   );
+};
+
+MovieList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  onUpdate: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onAdd: PropTypes.func.isRequired,
 };
 
 export default MovieList;

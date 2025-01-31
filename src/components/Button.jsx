@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Button = ({ text, onClick, isAbsolute }) => {
   const absoluteButton = { position: "absolute", top: "20px", left: "20px" };
@@ -12,6 +13,12 @@ const Button = ({ text, onClick, isAbsolute }) => {
       {text}
     </button>
   );
+};
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+  isAbsolute: PropTypes.bool,
 };
 
 export default Button;

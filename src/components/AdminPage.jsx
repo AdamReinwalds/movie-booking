@@ -20,8 +20,8 @@ const AdminPage = () => {
   const [feedback, setFeedback] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [visibleSection, setVisibleSection] = useState(null);
-  const [currentId, setCurrentId] = useState("");
   const [movieData, setMovieData] = useState({
+    id: "",
     title: "",
     price: {
       value: 0,
@@ -67,20 +67,19 @@ const AdminPage = () => {
   const handleUpdate = (id) => {
     const movieToUpdate = movies.find((movie) => movie.id === id);
     setMovieData(movieToUpdate);
-    setCurrentId(id);
     setVisibleSection("updateSection");
     setErrorMessage("");
     setFeedback("");
   };
 
   const handleUpdateSubmit = async () => {
-    const data = { id: currentId, ...movieData };
-    await updateMovieAdmin(currentId, data);
+    await updateMovieAdmin(movieData.id, movieData);
     setVisibleSection(null);
     setFeedback("Movie Succesfully Updated!");
     setRefreshTrigger(!refreshTrigger);
   };
   const handleAdd = () => {
+    setMovieData(movieData.id === "");
     setVisibleSection("addSection");
     setErrorMessage("");
     setFeedback("");

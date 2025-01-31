@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const seatsInRow = 8;
 
@@ -29,6 +30,13 @@ const SeatRow = ({
       })}
     </div>
   );
+};
+
+SeatRow.propTypes = {
+  rowIndex: PropTypes.number.isRequired,
+  selectedSeats: PropTypes.arrayOf(PropTypes.number).isRequired,
+  toggleSelectedSeats: PropTypes.func.isRequired,
+  occupiedSeats: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
 export default SeatRow;
