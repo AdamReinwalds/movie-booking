@@ -37,8 +37,8 @@ The application simulates a movie booking system where users can browse movies, 
 1. Clone the repository:
 
    ```bash
-   git clone <repo-url>
-   cd movie-booking-project
+   git clone https://github.com/AdamReinwalds/movie-booking
+   cd movie-booking
    ```
 
 2. Install dependencies:
@@ -50,7 +50,7 @@ The application simulates a movie booking system where users can browse movies, 
 3. Start the mock backend using json-server:
 
    ```bash
-   json-server --watch db.json
+   json-server --watch data/db.json
    ```
 
 4. Start the frontend development server:
