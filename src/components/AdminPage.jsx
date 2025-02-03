@@ -79,7 +79,6 @@ const AdminPage = () => {
     setRefreshTrigger(!refreshTrigger);
   };
   const handleAdd = () => {
-    setMovieData(movieData.id === "");
     setVisibleSection("addSection");
     setErrorMessage("");
     setFeedback("");
@@ -87,7 +86,16 @@ const AdminPage = () => {
 
   const handleMovieSubmit = async () => {
     if (!errorMessage) {
-      addMovie(movieData);
+      const newMovie = {
+        title: movieData.title,
+        price: {
+          value: movieData.price.value,
+          currencySuffix: "kr",
+        },
+        occupiedSeatIndexes: [],
+        available: true,
+      };
+      addMovie(newMovie);
       setVisibleSection(null);
       setRefreshTrigger(!refreshTrigger);
       setFeedback("Movie Succesfully Added!");
