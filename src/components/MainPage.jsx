@@ -19,27 +19,26 @@ const MainPage = () => {
   const [selectedMovieId, setSelectedMovieId] = useState("");
   const [feedback, setFeedback] = useState("");
 
-  const [refreshTrigger, setRefreshTrigger] = useState(false);
+  async function fetchData() {
+    try {
+      const allMovies = await getMovies();
+      const filteredMovies = allMovies.filter((movie) => movie.available);
+      setMovies(filteredMovies);
+
+      if (!selectedMovieId) {
+        setMoviePrice(filteredMovies[0].price.value);
+        setSelectedMovieId(filteredMovies[0].id);
+        setSelectedMovie(filteredMovies[0].title);
+        setOccupiedSeats(filteredMovies[0].occupiedSeatIndexes);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   useEffect(() => {
-    async function fetchData() {
-      try {
-        const allMovies = await getMovies();
-        const filteredMovies = allMovies.filter((movie) => movie.available);
-        setMovies(filteredMovies);
-
-        if (!selectedMovieId) {
-          setMoviePrice(filteredMovies[0].price.value);
-          setSelectedMovieId(filteredMovies[0].id);
-          setSelectedMovie(filteredMovies[0].title);
-          setOccupiedSeats(filteredMovies[0].occupiedSeatIndexes);
-        }
-      } catch (error) {
-        console.error(error);
-      }
-    }
     fetchData();
-  }, [refreshTrigger, selectedMovieId]);
+  }, [selectedMovieId]);
 
   useEffect(() => {
     movies.forEach((movie) => {
@@ -98,7 +97,7 @@ const MainPage = () => {
     await addBooking(fullBookingInfo);
     setSelectedSeats([]);
 
-    setRefreshTrigger(!refreshTrigger);
+    fetchData();
     toggleForm();
     setFeedback("Booking succesfully submitted");
   };

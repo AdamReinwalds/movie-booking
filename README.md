@@ -55,11 +55,17 @@ The application simulates a movie booking system where users can browse movies, 
 
 4. Start the frontend development server:
 
-```bash
-npm start
-```
+   ```bash
+   npm start
+   ```
 
-5. Open the application in your browser at [http://localhost:3000](http://localhost:3000).
+5. Agree to run on another port
+
+   ```bash
+   y
+   ```
+
+6. Open the application in your browser at [http://localhost:3001](http://localhost:3001).
 
 ## 📂 Project Structure
 

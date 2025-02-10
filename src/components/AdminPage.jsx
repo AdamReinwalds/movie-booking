@@ -16,7 +16,6 @@ const AdminPage = () => {
   };
 
   const [movies, setMovies] = useState([]);
-  const [refreshTrigger, setRefreshTrigger] = useState(false);
   const [feedback, setFeedback] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [visibleSection, setVisibleSection] = useState(null);
@@ -31,14 +30,15 @@ const AdminPage = () => {
     available: true,
   });
 
+  async function fetchMovies() {
+    const allMovies = await getMovies();
+    const filteredMovies = allMovies.filter((movie) => movie.available);
+    setMovies(filteredMovies);
+  }
+
   useEffect(() => {
-    async function fetchMovies() {
-      const allMovies = await getMovies();
-      const filteredMovies = allMovies.filter((movie) => movie.available);
-      setMovies(filteredMovies);
-    }
     fetchMovies();
-  }, [refreshTrigger]);
+  }, []);
 
   const handleInput = (key, value) => {
     if (key === "title" && value.trim() === "")
@@ -76,7 +76,7 @@ const AdminPage = () => {
     await updateMovieAdmin(movieData.id, movieData);
     setVisibleSection(null);
     setFeedback("Movie Succesfully Updated!");
-    setRefreshTrigger(!refreshTrigger);
+    fetchMovies();
   };
   const handleAdd = () => {
     setVisibleSection("addSection");
@@ -97,7 +97,7 @@ const AdminPage = () => {
       };
       addMovie(newMovie);
       setVisibleSection(null);
-      setRefreshTrigger(!refreshTrigger);
+      fetchMovies();
       setFeedback("Movie Succesfully Added!");
     }
   };
@@ -105,7 +105,7 @@ const AdminPage = () => {
     const movieToDelete = movies.find((movie) => movie.id === id);
     const data = { ...movieToDelete, available: false };
     await deleteMovieAdmin(id, data);
-    setRefreshTrigger(!refreshTrigger);
+    fetchMovies();
     setFeedback("Movie Succesfully Deleted!");
   };
 
